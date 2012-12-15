@@ -1,5 +1,9 @@
 # Django settings for tuinkeuken project.
 
+import os.path
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -11,8 +15,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': os.path.join(PROJECT_ROOT, 'database.sqlite'),                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -103,7 +107,7 @@ ROOT_URLCONF = 'tuinkeuken.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'tuinkeuken.wsgi.application'
 
-TEMPLATE_DIRS = ('/home/akaidiot/Documents/Projects/tuinkeuken/templates',)
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
