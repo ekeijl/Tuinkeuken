@@ -15,14 +15,21 @@
     <h1>Heuy koken</h1>
 {% endblock %}
 
+<h2>List ALL the recipes o/</h2>
 {% block content %}
-    {% for recipe in recipes %}
-        <h2>{{ recipe }}</h2>
-    {% endfor %}
+    <ol>
+        {% for recipe in recipes %}
+            <li>{{ recipe }}</li>
+        {%  empty %}
+            <li>Nope, find your own recipe...</li>
+        {% endfor %}
+    </ol>
 {% endblock %}
 
 {% block footer %}
-    &copy; Tuinfizzle {% now 'Y' %}
+    <footer>
+        &copy; Tuinfizzle 2012&ndash;{% now 'Y' %}
+    </footer>
 {% endblock %}
 
 </body>
