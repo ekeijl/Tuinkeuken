@@ -11,11 +11,19 @@
 
 <body>
 
-{% block header %}{% endblock %}
+{% block header %}
+    <h1>Heuy koken</h1>
+{% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+    {% for recipe in recipes %}
+        <h2>{{ recipe }}</h2>
+    {% endfor %}
+{% endblock %}
 
-{% block footer %}{% endblock %}
+{% block footer %}
+    &copy; Tuinfizzle {% now 'Y' %}
+{% endblock %}
 
 </body>
 
