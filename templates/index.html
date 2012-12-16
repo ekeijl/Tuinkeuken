@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>List ALL the recipes o/</h2>
+
+    <ol>
+        {% for recipe in recipes %}
+            <li>{{ recipe }}</li>
+        {%  empty %}
+            <li>Nope, find your own recipe...</li>
+        {% endfor %}
+    </ol>
+{% endblock %}

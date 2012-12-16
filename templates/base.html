@@ -15,16 +15,7 @@
     <h1>Heuy koken</h1>
 {% endblock %}
 
-<h2>List ALL the recipes o/</h2>
-{% block content %}
-    <ol>
-        {% for recipe in recipes %}
-            <li>{{ recipe }}</li>
-        {%  empty %}
-            <li>Nope, find your own recipe...</li>
-        {% endfor %}
-    </ol>
-{% endblock %}
+{% block content %}{% endblock %}
 
 {% block footer %}
     <footer>
