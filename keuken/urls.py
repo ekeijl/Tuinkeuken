@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, url
 
 urlpatterns = patterns('',
-    url(r'(\d+)$', 'keuken.views.details', name='recipe-details'),
+    # TODO: how is recipe-details made referable from template as keuken:recipe-details?
+    url(r'(?P<id>\d+)$', 'keuken.views.details', name = 'recipe-details'),
 )
