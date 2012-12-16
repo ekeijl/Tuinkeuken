@@ -6,7 +6,7 @@
     <ol>
         {% for recipe in recipes %}
             {# TODO: reverse details page differently (see tuinkeuken/views.py) #}
-            <li><a href="{% url 'keuken.views.details' recipe.id %}">{{ recipe }}</a></li>
+            <li><a href="{% url 'keuken:recipe-details' recipe.id %}">{{ recipe }}</a></li>
         {%  empty %}
             <li>Nope, find your own recipe...</li>
         {% endfor %}

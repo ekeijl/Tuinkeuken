@@ -11,3 +11,4 @@ def details(request, id):
 
 def list_by_author(request, author):
     return HttpResponse(get_object_or_404(User, username = author))
+
