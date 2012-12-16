@@ -1,6 +1,7 @@
 {% load markup %}
 
 <h2>{{ recipe.name }}</h2>
+<span class="author">by <a href="{% url 'keuken.views.list_by_author' recipe.author.username %}">{{ recipe.author }}</a></span>
 
 <h3>Ingredients</h3>
 {{ recipe.ingredients|markdown }}
