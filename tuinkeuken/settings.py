@@ -83,6 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
+# FIXME: replace this value with a freshly generated one on before deploy
 SECRET_KEY = 's04o%nenm@rmb&g$ck-1wg^$x57sd%qb3l+@4c9$bsr+!*7myb'
 
 # List of callables that know how to import templates from various sources.
@@ -120,8 +121,6 @@ INSTALLED_APPS = (
 
     # XXX: markup module is deprecated, replace with something not from contrib
     'django.contrib.markup',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
     'keuken',
 )
 
@@ -153,3 +152,4 @@ LOGGING = {
         },
     }
 }
+

@@ -6,8 +6,9 @@ from .models import Recipe
 
 def details(request, id):
     return render_to_response('recipe-details.html', {
-        'recipe': get_object_or_404(Recipe, pk = id)
+        'recipe': get_object_or_404(Recipe, pk=id)
     })
 
 def list_by_author(request, author):
-    return HttpResponse(get_object_or_404(User, username = author))
+    return HttpResponse(get_object_or_404(User, username=author))
+
