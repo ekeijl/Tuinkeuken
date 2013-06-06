@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, url
 
-urlpatterns = patterns('',
-    # TODO: how is recipe-details made referable from template as keuken:recipe-details?
-    url(r'(?P<id>\d+)$', 'keuken.views.details', name='recipe-details'),
-    url(r'(?P<author>\w+)$', 'keuken.views.list_by_author', name='recipes-by-author'),
+urlpatterns = patterns('keuken.views',
+
+    url(r'^$', 'index'),
+    url(r'(?P<id>\d+)$', 'detail', name='detail'),
+    url(r'(?P<author>\w+)$', 'list_by_author', name='recipes-by-author'),
 )
